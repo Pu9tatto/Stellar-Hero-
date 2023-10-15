@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 7838135609877571779}
   - component: {fileID: 3354350902599031472}
   - component: {fileID: 1765551461095481272}
+  - component: {fileID: 6138085382983552116}
   m_Layer: 5
   m_Name: UpdateCharacteristicCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3570754582339205524
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -103,6 +104,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6138085382983552116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5307917722977620276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e046904937dd7f4f8edb2bb8b1561bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _window: {fileID: 2545897384693913813}
 --- !u!1 &5403791361012541468
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,8 +129,9 @@ GameObject:
   - component: {fileID: 3884772119273587738}
   - component: {fileID: 4903813789613279581}
   - component: {fileID: 4655638093011274986}
+  - component: {fileID: 2545897384693913813}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: UpdateCharacteristicWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,14 +210,32 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
+    m_Top: 150
+    m_Bottom: 150
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &2545897384693913813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403791361012541468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66efe1c4167132f43b7f50deb310ca88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characteristicChangers:
+  - {fileID: 11400000, guid: 94239bd5e953e3b4bb2504c50163107f, type: 2}
+  - {fileID: 11400000, guid: 4bd44f336227d7c4cbe21cc541da6431, type: 2}
+  - {fileID: 11400000, guid: 9020cf8b61de5ba45ba39a654ce25120, type: 2}
+  - {fileID: 11400000, guid: bd20e7b458d0ab24fb2f117b9bbb9e3a, type: 2}
+  _chengersCount: 3
